@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>4ware1 — Red Teamer</title>
+  <title>4ware1 — Security Researcher</title>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@700;900&display=swap" rel="stylesheet"/>
   <style>
     :root {
@@ -97,7 +97,7 @@
     .nav-dot { font-size: 0.5rem; }
 
     /* ── MAIN ── */
-    main { flex: 1; padding: 48px 60px 80px; }
+    main { flex: 1; padding: 48px 60px 80px; max-width: 1100px; margin: 0 auto; width: 100%; }
     .tab-panel { display: none; }
     .tab-panel.active { display: block; }
 
@@ -203,7 +203,8 @@
     .cr-link a::after { content: '→'; }
 
     /* ── ABOUT ── */
-    .about-wrap { max-width: 700px; }
+    .about-wrap { max-width: 700px; margin: 0 auto; text-align: center; }
+    .about-prompt { text-align: left; }
     .about-prompt {
       font-size: 0.68rem;
       color: var(--dim);
@@ -287,12 +288,14 @@
       <div class="about-prompt">cat about.txt</div>
       <div class="about-bio">
         <p>
-          I'm <span class="hl">4ware1</span>,I focus on learning and practicing penetration testing techniques through platforms
+          I'm <span class="hl">4ware1</span>, passionate about offensive security and ethical hacking.
+          I focus on learning and practicing penetration testing techniques through platforms
           like <span class="hl">TryHackMe</span> and <span class="hl">HackTheBox</span>.
         </p>
         <p>
           Every writeup I publish is my way of documenting the process, reinforcing knowledge
-         
+          and giving back to the community. I'm especially interested in <span class="hl">web exploitation</span>,
+          privilege escalation and Active Directory attacks.
         </p>
         <p>
           Currently looking for my first professional opportunity in cybersecurity
@@ -330,30 +333,54 @@
   </div>
 
   <!-- CERTIFICADOS -->
-<div class="tab-panel" id="panel-certs">
-  <div class="section-label">certificados</div>
-  <div class="certs-list">
-    <div class="cert-row ch">
-      <span>#</span>
-      <span>CERTIFICADO</span>
-      <span>PLATAFORMA</span>
-      <span>FECHA</span>
-      <span style="text-align:right">VER</span>
-    </div>
-    <div class="cert-row">
-      <span class="cr-num">01</span>
-      <div class="cr-name">eJPT — Junior Penetration Tester <span class="sub">eLearnSecurity / INE</span></div>
-      <span class="cr-platform plat-ec">ECCOUNCIL</span>
-      <span class="cr-date">Nov 2023</span>
-      <span class="cr-link"><a href="ejpt.png" target="_blank">VER</a></span>
+  <div class="tab-panel" id="panel-certs">
+    <div class="section-label">certificados</div>
+    <div class="certs-list">
+      <div class="cert-row ch">
+        <span>#</span>
+        <span>CERTIFICADO</span>
+        <span>PLATAFORMA</span>
+        <span>FECHA</span>
+        <span style="text-align:right">VER</span>
+      </div>
+      <div class="cert-row">
+        <span class="cr-num">01</span>
+        <div class="cr-name">Jr Penetration Tester <span class="sub">Learning Path completado</span></div>
+        <span class="cr-platform plat-thm">TRYHACKME</span>
+        <span class="cr-date">Ene 2024</span>
+        <span class="cr-link"><a href="#" target="_blank">VER</a></span>
+      </div>
+      <div class="cert-row">
+        <span class="cr-num">02</span>
+        <div class="cr-name">eJPT — Junior Penetration Tester <span class="sub">eLearnSecurity / INE</span></div>
+        <span class="cr-platform plat-ec">ECCOUNCIL</span>
+        <span class="cr-date">Nov 2023</span>
+        <span class="cr-link"><a href="#" target="_blank">VER</a></span>
+      </div>
+      <div class="cert-row">
+        <span class="cr-num">03</span>
+        <div class="cr-name">Certified Bug Bounty Hunter <span class="sub">HTB Academy</span></div>
+        <span class="cr-platform plat-htb">HACKTHEBOX</span>
+        <span class="cr-date">Mar 2024</span>
+        <span class="cr-link"><a href="#" target="_blank">VER</a></span>
+      </div>
+      <div class="cert-row">
+        <span class="cr-num">04</span>
+        <div class="cr-name">Top 1% Hacker <span class="sub">Ranking global</span></div>
+        <span class="cr-platform plat-thm">TRYHACKME</span>
+        <span class="cr-date">Dic 2023</span>
+        <span class="cr-link"><a href="#" target="_blank">VER</a></span>
+      </div>
+      <div class="cert-row">
+        <span class="cr-num">05</span>
+        <div class="cr-name">Pro Hacker <span class="sub">Rank desbloqueado</span></div>
+        <span class="cr-platform plat-htb">HACKTHEBOX</span>
+        <span class="cr-date">Feb 2024</span>
+        <span class="cr-link"><a href="#" target="_blank">VER</a></span>
+      </div>
     </div>
   </div>
 
-  <div style="margin-top: 40px; border: 1px solid var(--border); display: inline-block;">
-    <img src="ejpt.png" alt="eJPT Certificate"
-      style="display:block; max-width: 600px; width: 100%; opacity: 0.9; filter: brightness(0.95);">
-  </div>
-</div>
   <!-- TRYHACKME -->
   <div class="tab-panel" id="panel-thm">
     <div class="section-label">tryhackme writeups</div>
@@ -630,7 +657,7 @@
 
 <footer>
   <span>4ware1 — <a href="https://github.com/4ware1" target="_blank">github.com/4ware1</a></span>
-  <span>Red Teamer / CTF PLAYER</span>
+  <span>SECURITY RESEARCHER / CTF PLAYER</span>
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
