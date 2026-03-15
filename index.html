@@ -19,7 +19,7 @@
         ESCALA GLOBAL DE FUENTE
     ══════════════════════════════════════════════════════════════ */
     html {
-      font-size: 18px; /* 👈 CAMBIÁ ESTE NÚMERO para escalar todo */
+      font-size: 18px; /* para escalar todo */
     }
 
     :root {
@@ -71,9 +71,8 @@
     }
 
     /* ══════════════════════════════════════════════════════════════
-       🔠 TÍTULO PRINCIPAL "4ware1"
-       clamp(mínimo, fluido, máximo) → se adapta al ancho de pantalla
-       Cambiá los 3 valores para ajustar el rango de tamaño.
+        TÍTULO PRINCIPAL 
+    
     ══════════════════════════════════════════════════════════════ */
     .site-title {
       font-family: var(--head);
@@ -86,7 +85,7 @@
     .site-title .acc { color: var(--green); }
 
     /* ══════════════════════════════════════════════════════════════
-       🔠 SUBTÍTULO "CTF PLAYER" debajo del nombre
+        SUBTÍTULO "CTF PLAYER" debajo del nombre
     ══════════════════════════════════════════════════════════════ */
     .site-sub {
       font-size: 0.65rem; /* 👈 subtítulo header */
@@ -104,7 +103,7 @@
     }
 
     /* ══════════════════════════════════════════════════════════════
-       🔠 BOTONES DE NAVEGACIÓN (ABOUT / CERTIFICATES / etc.)
+        BOTONES DE NAVEGACIÓN (ABOUT / CERTIFICATES / etc.)
     ══════════════════════════════════════════════════════════════ */
     .nav-btn {
       font-family: var(--mono);
@@ -132,7 +131,7 @@
     .tab-panel.active { display: block; }
 
     /* ══════════════════════════════════════════════════════════════
-       🔠 ETIQUETA DE SECCIÓN ("> about.txt ───────")
+        ETIQUETA DE SECCIÓN ("> about.txt ───────")
     ══════════════════════════════════════════════════════════════ */
     .section-label {
       font-size: 0.58rem; /* 👈 label de sección */
@@ -152,13 +151,13 @@
     .table-wrap { overflow-x: auto; }
 
     /* ══════════════════════════════════════════════════════════════
-       🔠 TEXTO GENERAL DE TABLAS
+        TEXTO GENERAL DE TABLAS
     ══════════════════════════════════════════════════════════════ */
     table { width: 100%; border-collapse: collapse; font-size: 0.78rem; /* 👈 tabla general */ }
     thead tr { border-bottom: 1px solid var(--border); }
 
     /* ══════════════════════════════════════════════════════════════
-       🔠 ENCABEZADOS DE COLUMNAS EN TABLAS (# / ROOM / DIFFICULTY…)
+        ENCABEZADOS DE COLUMNAS EN TABLAS (# / ROOM / DIFFICULTY…)
     ══════════════════════════════════════════════════════════════ */
     th {
       font-size: 0.57rem; /* 👈 headers de tabla */
@@ -180,12 +179,12 @@
     td:last-child { text-align: right; }
 
     /* ══════════════════════════════════════════════════════════════
-       🔠 NOMBRE DE MÁQUINA / ROOM (texto principal de fila)
+        NOMBRE DE MÁQUINA / ROOM (texto principal de fila)
     ══════════════════════════════════════════════════════════════ */
     .td-name { color: #fff; font-size: 0.82rem; /* 👈 nombre de máquina */ }
 
     /* ══════════════════════════════════════════════════════════════
-       🔠 SUBTÍTULO DE MÁQUINA ("TryHackMe" / "HackTheBox")
+        SUBTÍTULO DE MÁQUINA ("TryHackMe" / "HackTheBox")
     ══════════════════════════════════════════════════════════════ */
     .td-name .sub { display: block; color: var(--dim); font-size: 0.62rem; /* 👈 sub de máquina */ margin-top: 3px; }
 
@@ -196,13 +195,13 @@
     .diff-insane { background: rgba(196,122,255,0.1); color: var(--purple); }
 
     /* ══════════════════════════════════════════════════════════════
-       🔠 CATEGORÍA (LINUX / WEB / etc.)
+        CATEGORÍA (LINUX / WEB / etc.)
     ══════════════════════════════════════════════════════════════ */
     .td-cat  { color: var(--dim); font-size: 0.68rem; /* 👈 categoría */ }
     .td-date { display: none; }
 
     /* ══════════════════════════════════════════════════════════════
-       🔠 LINKS "VIEW →" EN TABLAS
+        LINKS "VIEW →" EN TABLAS
     ══════════════════════════════════════════════════════════════ */
     .td-link a {
       font-size: 0.65rem; /* 👈 link view tabla */
@@ -241,13 +240,13 @@
     .cr-num { color: var(--dim); font-size: 0.65rem; padding-left: 0; }
 
     /* ══════════════════════════════════════════════════════════════
-       🔠 NOMBRE DEL CERTIFICADO
+        NOMBRE DEL CERTIFICADO
     ══════════════════════════════════════════════════════════════ */
     .cr-name { color: #fff; font-size: 0.82rem; /* 👈 nombre certificado */ }
     .cr-name .sub { display: block; color: var(--dim); font-size: 0.62rem; margin-top: 3px; }
 
     /* ══════════════════════════════════════════════════════════════
-       🔠 NOMBRE DE PLATAFORMA EN CERTS (INE / HTB / THM…)
+        NOMBRE DE PLATAFORMA EN CERTS (INE / HTB / THM…)
     ══════════════════════════════════════════════════════════════ */
     .cr-platform { font-size: 0.63rem; /* 👈 plataforma cert */ letter-spacing: 0.1em; }
     .plat-thm   { color: var(--green); }
@@ -256,7 +255,7 @@
     .plat-other { color: var(--yellow); }
 
     /* ══════════════════════════════════════════════════════════════
-       🔠 FECHA EN CERTIFICADOS
+        FECHA EN CERTIFICADOS
     ══════════════════════════════════════════════════════════════ */
     .cr-date { color: var(--dim); font-size: 0.65rem; /* 👈 fecha cert */ }
     .cr-link { text-align: right; }
@@ -276,7 +275,7 @@
     .about-prompt { text-align: left; }
 
     /* ══════════════════════════════════════════════════════════════
-       🔠 PROMPT "$ cat about.txt"
+        PROMPT "$ cat about.txt"
     ══════════════════════════════════════════════════════════════ */
     .about-prompt {
       font-size: 0.68rem; /* 👈 prompt about */
@@ -287,7 +286,7 @@
     .about-prompt::before { content: '$ '; color: var(--green); }
 
     /* ══════════════════════════════════════════════════════════════
-       🔠 TEXTO PRINCIPAL DEL BIO (párrafos de About)
+       TEXTO PRINCIPAL DEL BIO (párrafos de About)
     ══════════════════════════════════════════════════════════════ */
     .about-bio { font-size: 0.82rem; /* 👈 bio texto */ line-height: 1.95; color: var(--text); }
     .about-bio p + p { margin-top: 18px; }
@@ -300,12 +299,12 @@
     }
 
     /* ══════════════════════════════════════════════════════════════
-       🔠 ETIQUETA DE CAMPO (LOCATION / FOCUS / GITHUB…)
+       ETIQUETA DE CAMPO (LOCATION / FOCUS / GITHUB…)
     ══════════════════════════════════════════════════════════════ */
     .info-label { font-size: 0.57rem; /* 👈 labels about */ letter-spacing: 0.22em; color: var(--dim); margin-bottom: 5px; }
 
     /* ══════════════════════════════════════════════════════════════
-       🔠 VALOR DE CAMPO (Argentina / Offensive pentesting…)
+       VALOR DE CAMPO (Argentina / Offensive pentesting…)
     ══════════════════════════════════════════════════════════════ */
     .info-val { font-size: 0.78rem; /* 👈 valores about */ color: var(--text); }
     .info-val a { color: var(--cyan); text-decoration: none; }
@@ -314,7 +313,7 @@
     /* ── FOOTER ── */
 
     /* ══════════════════════════════════════════════════════════════
-       🔠 TEXTO DEL FOOTER
+        TEXTO DEL FOOTER
     ══════════════════════════════════════════════════════════════ */
     footer {
       padding: 20px 60px;
