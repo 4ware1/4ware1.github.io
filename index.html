@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>4ware1 — Red Teamer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@700;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet"/>
   <script>
     window.switchTab = function(id, btn) {
       document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
@@ -14,6 +14,14 @@
     }
   </script>
   <style>
+
+    /* ══════════════════════════════════════════════════════════════
+        ESCALA GLOBAL DE FUENTE
+    ══════════════════════════════════════════════════════════════ */
+    html {
+      font-size: 20px; /* 👈 CAMBIÁ ESTE NÚMERO para escalar todo */
+    }
+
     :root {
       --bg:     #060a0f;
       --bg2:    #0b1017;
@@ -26,7 +34,7 @@
       --text:   #c8d8e8;
       --dim:    #3a5060;
       --border: #1a2a3a;
-      --mono:   'Share Tech Mono', monospace;
+      --mono: 'Poppins', sans-serif;
       --head:   'Orbitron', sans-serif;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -61,32 +69,46 @@
       flex-wrap: wrap;
       gap: 24px;
     }
+
+    /* ══════════════════════════════════════════════════════════════
+       🔠 TÍTULO PRINCIPAL "4ware1"
+       clamp(mínimo, fluido, máximo) → se adapta al ancho de pantalla
+       Cambiá los 3 valores para ajustar el rango de tamaño.
+    ══════════════════════════════════════════════════════════════ */
     .site-title {
       font-family: var(--head);
-      font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+      font-size: clamp(1.6rem, 3.5vw, 2.6rem); /* 👈 título principal */
       font-weight: 900;
       color: #fff;
       letter-spacing: 0.06em;
       line-height: 1;
     }
     .site-title .acc { color: var(--green); }
+
+    /* ══════════════════════════════════════════════════════════════
+       🔠 SUBTÍTULO "CTF PLAYER" debajo del nombre
+    ══════════════════════════════════════════════════════════════ */
     .site-sub {
-      font-size: 0.65rem;
+      font-size: 0.65rem; /* 👈 subtítulo header */
       color: var(--dim);
       letter-spacing: 0.28em;
       margin-top: 9px;
     }
 
-    /* nav links — unificado, sin tabs separados */
+    /* nav links */
     .nav {
       display: flex;
       gap: 0;
       flex-wrap: wrap;
       border: 1px solid var(--border);
     }
+
+    /* ══════════════════════════════════════════════════════════════
+       🔠 BOTONES DE NAVEGACIÓN (ABOUT / CERTIFICATES / etc.)
+    ══════════════════════════════════════════════════════════════ */
     .nav-btn {
       font-family: var(--mono);
-      font-size: 0.65rem;
+      font-size: 0.65rem; /* 👈 texto nav */
       letter-spacing: 0.15em;
       color: var(--dim);
       background: none;
@@ -109,9 +131,11 @@
     .tab-panel { display: none; }
     .tab-panel.active { display: block; }
 
-    /* section label */
+    /* ══════════════════════════════════════════════════════════════
+       🔠 ETIQUETA DE SECCIÓN ("> about.txt ───────")
+    ══════════════════════════════════════════════════════════════ */
     .section-label {
-      font-size: 0.58rem;
+      font-size: 0.58rem; /* 👈 label de sección */
       letter-spacing: 0.3em;
       color: var(--dim);
       margin-bottom: 28px;
@@ -126,10 +150,18 @@
 
     /* ── TABLES ── */
     .table-wrap { overflow-x: auto; }
-    table { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
+
+    /* ══════════════════════════════════════════════════════════════
+       🔠 TEXTO GENERAL DE TABLAS
+    ══════════════════════════════════════════════════════════════ */
+    table { width: 100%; border-collapse: collapse; font-size: 0.78rem; /* 👈 tabla general */ }
     thead tr { border-bottom: 1px solid var(--border); }
+
+    /* ══════════════════════════════════════════════════════════════
+       🔠 ENCABEZADOS DE COLUMNAS EN TABLAS (# / ROOM / DIFFICULTY…)
+    ══════════════════════════════════════════════════════════════ */
     th {
-      font-size: 0.57rem;
+      font-size: 0.57rem; /* 👈 headers de tabla */
       letter-spacing: 0.22em;
       color: var(--dim);
       text-align: left;
@@ -146,17 +178,34 @@
     td { padding: 17px 12px; vertical-align: middle; }
     td:first-child { padding-left: 0; color: var(--dim); font-size: 0.65rem; }
     td:last-child { text-align: right; }
-    .td-name { color: #fff; font-size: 0.82rem; }
-    .td-name .sub { display: block; color: var(--dim); font-size: 0.62rem; margin-top: 3px; }
+
+    /* ══════════════════════════════════════════════════════════════
+       🔠 NOMBRE DE MÁQUINA / ROOM (texto principal de fila)
+    ══════════════════════════════════════════════════════════════ */
+    .td-name { color: #fff; font-size: 0.82rem; /* 👈 nombre de máquina */ }
+
+    /* ══════════════════════════════════════════════════════════════
+       🔠 SUBTÍTULO DE MÁQUINA ("TryHackMe" / "HackTheBox")
+    ══════════════════════════════════════════════════════════════ */
+    .td-name .sub { display: block; color: var(--dim); font-size: 0.62rem; /* 👈 sub de máquina */ margin-top: 3px; }
+
     .diff { display: inline-block; padding: 3px 10px; font-size: 0.6rem; letter-spacing: 0.1em; border-radius: 2px; }
     .diff-easy   { background: rgba(0,255,157,0.08);  color: var(--green);  }
     .diff-medium { background: rgba(255,230,0,0.08);  color: var(--yellow); }
     .diff-hard   { background: rgba(255,45,85,0.1);   color: var(--red);    }
     .diff-insane { background: rgba(196,122,255,0.1); color: var(--purple); }
-    .td-cat  { color: var(--dim); font-size: 0.68rem; }
+
+    /* ══════════════════════════════════════════════════════════════
+       🔠 CATEGORÍA (LINUX / WEB / etc.)
+    ══════════════════════════════════════════════════════════════ */
+    .td-cat  { color: var(--dim); font-size: 0.68rem; /* 👈 categoría */ }
     .td-date { display: none; }
+
+    /* ══════════════════════════════════════════════════════════════
+       🔠 LINKS "VIEW →" EN TABLAS
+    ══════════════════════════════════════════════════════════════ */
     .td-link a {
-      font-size: 0.65rem;
+      font-size: 0.65rem; /* 👈 link view tabla */
       letter-spacing: 0.12em;
       color: var(--cyan);
       text-decoration: none;
@@ -190,14 +239,26 @@
       color: var(--dim);
     }
     .cr-num { color: var(--dim); font-size: 0.65rem; padding-left: 0; }
-    .cr-name { color: #fff; font-size: 0.82rem; }
+
+    /* ══════════════════════════════════════════════════════════════
+       🔠 NOMBRE DEL CERTIFICADO
+    ══════════════════════════════════════════════════════════════ */
+    .cr-name { color: #fff; font-size: 0.82rem; /* 👈 nombre certificado */ }
     .cr-name .sub { display: block; color: var(--dim); font-size: 0.62rem; margin-top: 3px; }
-    .cr-platform { font-size: 0.63rem; letter-spacing: 0.1em; }
+
+    /* ══════════════════════════════════════════════════════════════
+       🔠 NOMBRE DE PLATAFORMA EN CERTS (INE / HTB / THM…)
+    ══════════════════════════════════════════════════════════════ */
+    .cr-platform { font-size: 0.63rem; /* 👈 plataforma cert */ letter-spacing: 0.1em; }
     .plat-thm   { color: var(--green); }
     .plat-htb   { color: var(--red); }
     .plat-ec    { color: var(--cyan); }
     .plat-other { color: var(--yellow); }
-    .cr-date { color: var(--dim); font-size: 0.65rem; }
+
+    /* ══════════════════════════════════════════════════════════════
+       🔠 FECHA EN CERTIFICADOS
+    ══════════════════════════════════════════════════════════════ */
+    .cr-date { color: var(--dim); font-size: 0.65rem; /* 👈 fecha cert */ }
     .cr-link { text-align: right; }
     .cr-link a {
       font-size: 0.65rem;
@@ -213,14 +274,22 @@
     /* ── ABOUT ── */
     .about-wrap { max-width: 700px; margin: 0 auto; text-align: center; }
     .about-prompt { text-align: left; }
+
+    /* ══════════════════════════════════════════════════════════════
+       🔠 PROMPT "$ cat about.txt"
+    ══════════════════════════════════════════════════════════════ */
     .about-prompt {
-      font-size: 0.68rem;
+      font-size: 0.68rem; /* 👈 prompt about */
       color: var(--dim);
       letter-spacing: 0.15em;
       margin-bottom: 28px;
     }
     .about-prompt::before { content: '$ '; color: var(--green); }
-    .about-bio { font-size: 0.82rem; line-height: 1.95; color: var(--text); }
+
+    /* ══════════════════════════════════════════════════════════════
+       🔠 TEXTO PRINCIPAL DEL BIO (párrafos de About)
+    ══════════════════════════════════════════════════════════════ */
+    .about-bio { font-size: 0.82rem; /* 👈 bio texto */ line-height: 1.95; color: var(--text); }
     .about-bio p + p { margin-top: 18px; }
     .about-bio .hl { color: var(--green); }
     .about-divider { border: none; border-top: 1px solid var(--border); margin: 36px 0; }
@@ -229,16 +298,28 @@
       grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
       gap: 20px;
     }
-    .info-label { font-size: 0.57rem; letter-spacing: 0.22em; color: var(--dim); margin-bottom: 5px; }
-    .info-val { font-size: 0.78rem; color: var(--text); }
+
+    /* ══════════════════════════════════════════════════════════════
+       🔠 ETIQUETA DE CAMPO (LOCATION / FOCUS / GITHUB…)
+    ══════════════════════════════════════════════════════════════ */
+    .info-label { font-size: 0.57rem; /* 👈 labels about */ letter-spacing: 0.22em; color: var(--dim); margin-bottom: 5px; }
+
+    /* ══════════════════════════════════════════════════════════════
+       🔠 VALOR DE CAMPO (Argentina / Offensive pentesting…)
+    ══════════════════════════════════════════════════════════════ */
+    .info-val { font-size: 0.78rem; /* 👈 valores about */ color: var(--text); }
     .info-val a { color: var(--cyan); text-decoration: none; }
     .info-val a:hover { color: var(--green); }
 
     /* ── FOOTER ── */
+
+    /* ══════════════════════════════════════════════════════════════
+       🔠 TEXTO DEL FOOTER
+    ══════════════════════════════════════════════════════════════ */
     footer {
       padding: 20px 60px;
       border-top: 1px solid var(--border);
-      font-size: 0.58rem;
+      font-size: 0.58rem; /* 👈 footer */
       color: var(--dim);
       letter-spacing: 0.15em;
       display: flex; justify-content: space-between; align-items: center;
@@ -377,7 +458,7 @@
             <td class="td-date">—</td>
             <td class="td-link"><a href="https://github.com/4ware1/Tryhackme/blob/main/Machines/BOOT2ROOT.md" target="_blank">VIEW</a></td>
           </tr>
-            <tr>
+          <tr>
             <td>02</td>
             <td class="td-name">VulnNetv1 <span class="sub">TryHackMe</span></td>
             <td><span class="diff diff-medium">MEDIUM</span></td>
@@ -557,6 +638,13 @@
   <span>CTF PLAYER</span>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   function switchTab(id, btn) {
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active')
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('panel-' + id).classList.add('active');
+    if (btn) btn.classList.add('active');
+  }
+</script>
+</body>
+</html>
